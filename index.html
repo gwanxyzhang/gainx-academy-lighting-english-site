@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAINX ACADEMY | 灯饰外贸英语全攻略</title>
+  <meta
+    name="description"
+    content="GAINX ACADEMY 灯饰外贸英语全攻略在线版，涵盖课程安排、教材体系与收费标准。"
+  />
+  <meta property="og:title" content="GAINX ACADEMY | 灯饰外贸英语全攻略" />
+  <meta
+    property="og:description"
+    content="专为灯饰行业打造，从开口到成交，用英语赢得全球客户。"
+  />
+  <meta name="theme-color" content="#1B2A4A" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap");
+
+    :root {
+      --navy: #1b2a4a;
+      --navy-soft: #314769;
+      --gold: #b8962e;
+      --gold-soft: #e2d3a3;
+      --cream: #faf8f3;
+      --cream-deep: #f1ece1;
+      --paper: rgba(255, 255, 255, 0.74);
+      --line: rgba(27, 42, 74, 0.1);
+      --text: #2f2d29;
+      --muted: rgba(27, 42, 74, 0.72);
+      --shadow: 0 18px 48px rgba(27, 42, 74, 0.08);
+      --radius: 24px;
+      --wrap: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--navy);
+      background:
+        radial-gradient(circle at top left, rgba(184, 150, 46, 0.1), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(27, 42, 74, 0.08), transparent 24%),
+        linear-gradient(180deg, #efe7d8 0%, #e8e0d2 100%);
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page-shell {
+      width: min(var(--wrap), calc(100% - 32px));
+      margin: 24px auto;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(250, 248, 243, 0.94)),
+        var(--cream);
+      border: 1px solid rgba(184, 150, 46, 0.2);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-shell::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(184, 150, 46, 0.16);
+      pointer-events: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(250, 248, 243, 0.74);
+      border-bottom: 1px solid rgba(27, 42, 74, 0.08);
+    }
+
+    .header-inner,
+    .section-inner,
+    .footer-inner {
+      width: min(1080px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: grid;
+      gap: 4px;
+    }
+
+    .brand-overline {
+      font-size: 10px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .brand-name {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 30px;
+      line-height: 0.95;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-soft);
+    }
+
+    .nav a {
+      position: relative;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .hero {
+      position: relative;
+      padding: 68px 0 42px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -90px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184, 150, 46, 0.14), transparent 68%);
+      filter: blur(6px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero-title {
+      margin: 18px 0 0;
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1.16;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    .hero-title em {
+      display: block;
+      margin-top: 12px;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(24px, 2vw, 32px);
+      line-height: 1.18;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .chip {
+      padding: 9px 14px;
+      border: 1px solid rgba(184, 150, 46, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--navy-soft);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin-top: 22px;
+      font-size: 18px;
+      line-height: 1.95;
+      color: var(--navy);
+    }
+
+    .hero-copy strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .hero-author {
+      margin-top: 16px;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(27, 42, 74, 0.1);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.6);
+      color: var(--navy);
+    }
+
+    .hero-card {
+      padding: 26px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(246, 241, 231, 0.96));
+      border: 1px solid rgba(27, 42, 74, 0.08);
+      box-shadow: 0 16px 36px rgba(27, 42, 74, 0.06);
+    }
+
+    .card-label {
+      font-size: 10px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .card-title {
+      margin: 14px 0 14px;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 0.95;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .card-copy {
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .key-points {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .point {
+      padding: 11px 12px;
+      border-radius: 14px;
+      background: rgba(27, 42, 74, 0.04);
+      border: 1px solid rgba(27, 42, 74, 0.06);
+      font-size: 12px;
+      line-height: 1.72;
+      color: var(--navy-soft);
+    }
+
+    .section {
+      padding: 28px 0 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(27, 42, 74, 0.12), transparent);
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .book {
+      padding: 12px;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 238, 227, 0.96));
+      border: 1px solid rgba(184, 150, 46, 0.18);
+      box-shadow: 0 16px 28px rgba(27, 42, 74, 0.05);
+      transform: translateY(18px);
+      opacity: 0;
+      animation: rise 0.7s ease forwards;
+    }
+
+    .book:nth-child(2) {
+      animation-delay: 0.08s;
+    }
+
+    .book:nth-child(3) {
+      animation-delay: 0.16s;
+    }
+
+    .book:nth-child(4) {
+      animation-delay: 0.24s;
+    }
+
+    .book img {
+      width: 100%;
+      aspect-ratio: 1694 / 2528;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(184, 150, 46, 0.12);
+    }
+
+    .book-meta {
+      display: grid;
+      gap: 4px;
+      margin-top: 12px;
+    }
+
+    .book-level {
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .book-name {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--navy);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 22px;
+      padding-bottom: 30px;
+    }
+
+    .panel {
+      padding: 24px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(246, 241, 231, 0.94));
+      border: 1px solid rgba(27, 42, 74, 0.08);
+      box-shadow: 0 16px 36px rgba(27, 42, 74, 0.05);
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .panel-main {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 42px;
+      line-height: 0.94;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .panel-side {
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .course-card {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .course-card:first-of-type,
+    .price-block:first-of-type {
+      border-top: 0;
+      padding-top: 6px;
+    }
+
+    .course-name {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(184, 150, 46, 0.12);
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .course-lines,
+    .mini-copy {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .mini-card {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(27, 42, 74, 0.04);
+      border: 1px solid rgba(27, 42, 74, 0.06);
+    }
+
+    .mini-title {
+      margin-bottom: 8px;
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .price-block {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .subhead {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .price-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(27, 42, 74, 0.04);
+      border: 1px solid rgba(27, 42, 74, 0.06);
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .price-row strong,
+    .table strong {
+      color: var(--navy);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .table-wrap {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(27, 42, 74, 0.08);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .table th,
+    .table td {
+      text-align: left;
+      padding: 12px 14px;
+    }
+
+    .table thead th {
+      background: rgba(27, 42, 74, 0.05);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .table tbody td {
+      border-top: 1px solid rgba(27, 42, 74, 0.07);
+    }
+
+    .footer {
+      padding: 14px 0 42px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(27, 42, 74, 0.08);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .footer-inner strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    @keyframes rise {
+      from {
+        transform: translateY(18px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .info-grid,
+      .books {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-grid > :first-child,
+      .hero-grid > :last-child,
+      .info-grid > :first-child,
+      .info-grid > :last-child {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .page-shell {
+        width: min(100%, calc(100% - 16px));
+        margin: 8px auto;
+      }
+
+      .header-inner,
+      .section-inner,
+      .footer-inner {
+        width: min(100%, calc(100% - 28px));
+      }
+
+      .header-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding: 42px 0 22px;
+      }
+
+      .hero-grid,
+      .books,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid > :first-child,
+      .hero-grid > :last-child,
+      .info-grid > :first-child,
+      .info-grid > :last-child {
+        grid-column: auto;
+      }
+
+      .hero-title {
+        font-size: 38px;
+      }
+
+      .panel-main,
+      .card-title {
+        font-size: 34px;
+      }
+
+      .hero-copy {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-overline">Quietly Curated For Lighting Exporters</div>
+          <div class="brand-name">GAINX ACADEMY</div>
+          <div class="brand-sub">Speak · Sell · Shine</div>
+        </div>
+        <nav class="nav">
+          <a href="#materials">教材体系</a>
+          <a href="#program">课程安排</a>
+          <a href="#pricing">收费标准</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="section-inner hero-grid">
+          <div>
+            <div class="eyebrow">2025 Spring Intake</div>
+            <h1 class="hero-title">
+              灯饰外贸英语全攻略
+              <em>Lighting Export English Masterclass</em>
+            </h1>
+
+            <div class="hero-meta">
+              <div class="chip">品牌：GAINX ACADEMY</div>
+              <div class="chip">招生：2025春季</div>
+              <div class="chip">开课日期：4月10日</div>
+            </div>
+
+            <div class="hero-author">编写者：张关旭 Gwanxy Zhang</div>
+
+            <div class="hero-copy">
+              <strong>专为灯饰行业打造，</strong>从开口到成交，用英语赢得全球客户。
+            </div>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#program">查看课程安排</a>
+              <a class="button button-secondary" href="#pricing">查看收费标准</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <div class="card-label">Program Essence</div>
+            <div class="card-title">Speak.<br />Sell.<br />Shine.</div>
+            <div class="card-copy">
+              这是一套围绕灯饰外贸场景、客户沟通与成交路径设计的行业化表达训练体系，
+              帮助学习者从敢说、会说，走向专业、可信赖、能成交。
+            </div>
+            <div class="key-points">
+              <div class="point">从不开口，到能自然介绍产品、回复询盘、推进合作。</div>
+              <div class="point">从单次报价，到建立专业、可信赖的海外客户沟通形象。</div>
+              <div class="point">从销售表达，到结合 AI 工具提升效率、呈现与业务拓展能力。</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="materials">
+        <div class="section-inner">
+          <div class="section-title">Course Materials</div>
+          <div class="books">
+            <article class="book">
+              <img src="./assets/level-1.webp" alt="Level 1 封面" loading="lazy" />
+              <div class="book-meta">
+                <div class="book-level">Level 1</div>
+                <div class="book-name">From Silent to Spoken</div>
+              </div>
+            </article>
+
+            <article class="book">
+              <img src="./assets/level-2.webp" alt="Level 2 封面" loading="lazy" />
+              <div class="book-meta">
+                <div class="book-level">Level 2</div>
+                <div class="book-name">From Local Seller to Global Brand</div>
+              </div>
+            </article>
+
+            <article class="book">
+              <img src="./assets/level-3.webp" alt="Level 3 封面" loading="lazy" />
+              <div class="book-meta">
+                <div class="book-level">Level 3</div>
+                <div class="book-name">From Sales Rep to Trusted Partner</div>
+              </div>
+            </article>
+
+            <article class="book">
+              <img src="./assets/level-4.webp" alt="Level 4 封面" loading="lazy" />
+              <div class="book-meta">
+                <div class="book-level">Level 4</div>
+                <div class="book-name">From Expert to Industry Voice</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="program">
+        <div class="section-inner info-grid">
+          <section class="panel">
+            <div class="panel-head">
+              <div class="panel-main">Course Plan</div>
+              <div class="panel-side">课程安排</div>
+            </div>
+
+            <article class="course-card">
+              <div class="course-name">
+                <span>灯饰外贸英语课</span>
+                <span class="pill">English</span>
+              </div>
+              <div class="course-lines">
+                <div>周一、三、五</div>
+                <div>90分钟 / 节</div>
+                <div>3个月约36节</div>
+              </div>
+            </article>
+
+            <article class="course-card">
+              <div class="course-name">
+                <span>AI赋能灯饰产业课</span>
+                <span class="pill">AI</span>
+              </div>
+              <div class="course-lines">
+                <div>周二、四</div>
+                <div>50分钟 / 节</div>
+                <div>3个月约24节</div>
+              </div>
+
+              <div class="mini-card">
+                <div class="mini-title">AI Course Content</div>
+                <div class="mini-copy">
+                  <div>① AI × 外贸英语：开发信、询盘回复、报价表达</div>
+                  <div>② AI × 企业管理：图册整理、财务辅助、业务拓展</div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel" id="pricing">
+            <div class="panel-head">
+              <div class="panel-main">Tuition</div>
+              <div class="panel-side">收费标准</div>
+            </div>
+
+            <section class="price-block">
+              <div class="subhead">个人报名</div>
+              <div class="price-list">
+                <div class="price-row">
+                  <span>英语课</span>
+                  <strong>¥888 / 期</strong>
+                </div>
+                <div class="price-row">
+                  <span>AI课</span>
+                  <strong>¥680 / 期</strong>
+                </div>
+                <div class="price-row">
+                  <span>英语 + AI 套餐</span>
+                  <strong>¥1,480 / 期</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="price-block">
+              <div class="subhead">门市包场（按节）</div>
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>人数</th>
+                      <th>英语课</th>
+                      <th>英语 + AI</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 - 3人</td>
+                      <td><strong>¥200 / 节</strong></td>
+                      <td><strong>¥300 / 节</strong></td>
+                    </tr>
+                    <tr>
+                      <td>4 - 6人</td>
+                      <td><strong>¥350 / 节</strong></td>
+                      <td><strong>¥500 / 节</strong></td>
+                    </tr>
+                    <tr>
+                      <td>7 - 10人</td>
+                      <td><strong>¥500 / 节</strong></td>
+                      <td><strong>¥800 / 节</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <strong>GAINX ACADEMY</strong>
+        <span>SPEAK · SELL · SHINE</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
