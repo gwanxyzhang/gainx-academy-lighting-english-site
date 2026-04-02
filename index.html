@@ -407,11 +407,27 @@
     }
 
     .book img {
+      display: block;
       width: 100%;
-      aspect-ratio: 1694 / 2528;
+      height: 100%;
       object-fit: cover;
       border-radius: 14px;
       border: 1px solid rgba(184, 150, 46, 0.12);
+    }
+
+    .book-cover {
+      aspect-ratio: 960 / 1432;
+      overflow: hidden;
+      border-radius: 14px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 238, 227, 0.96));
+      box-shadow: inset 0 0 0 1px rgba(184, 150, 46, 0.08);
+    }
+
+    .book-cover picture {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .book-meta {
@@ -723,8 +739,14 @@
     }
 
     .contact-qr img {
+      display: block;
       width: 100%;
+      height: auto;
       border-radius: 18px;
+    }
+
+    .contact-qr picture {
+      display: block;
     }
 
     .contact-caption {
@@ -886,8 +908,29 @@
       }
 
       .books {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(184px, 72vw);
+        grid-template-columns: none;
         gap: 14px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        padding-bottom: 8px;
+        margin-inline: -2px;
+      }
+
+      .books::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .books::-webkit-scrollbar-thumb {
+        background: rgba(27, 42, 74, 0.16);
+        border-radius: 999px;
+      }
+
+      .book {
+        scroll-snap-align: start;
       }
 
       .hero-grid > :first-child,
@@ -1049,7 +1092,7 @@
       }
 
       .books {
-        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: minmax(172px, 74vw);
         gap: 12px;
       }
 
@@ -1147,14 +1190,17 @@
           <div class="section-title">Course Materials</div>
           <div class="books">
             <article class="book">
-              <img
-                src="./assets/level-1-site.jpg"
-                alt="Level 1 封面"
-                loading="lazy"
-                decoding="async"
-                width="720"
-                height="1073"
-              />
+              <div class="book-cover">
+                <picture>
+                  <source media="(max-width: 780px)" srcset="./assets/level-1-site.jpg" />
+                  <img
+                    src="./assets/level-1-desktop.jpg"
+                    alt="Level 1 封面"
+                    width="960"
+                    height="1430"
+                  />
+                </picture>
+              </div>
               <div class="book-meta">
                 <div class="book-level">Level 1</div>
                 <div class="book-name">From Silent to Spoken</div>
@@ -1162,14 +1208,17 @@
             </article>
 
             <article class="book">
-              <img
-                src="./assets/level-2-site.jpg"
-                alt="Level 2 封面"
-                loading="lazy"
-                decoding="async"
-                width="720"
-                height="1074"
-              />
+              <div class="book-cover">
+                <picture>
+                  <source media="(max-width: 780px)" srcset="./assets/level-2-site.jpg" />
+                  <img
+                    src="./assets/level-2-desktop.jpg"
+                    alt="Level 2 封面"
+                    width="960"
+                    height="1432"
+                  />
+                </picture>
+              </div>
               <div class="book-meta">
                 <div class="book-level">Level 2</div>
                 <div class="book-name">From Local Seller to Global Brand</div>
@@ -1177,14 +1226,17 @@
             </article>
 
             <article class="book">
-              <img
-                src="./assets/level-3-site.jpg"
-                alt="Level 3 封面"
-                loading="lazy"
-                decoding="async"
-                width="720"
-                height="1074"
-              />
+              <div class="book-cover">
+                <picture>
+                  <source media="(max-width: 780px)" srcset="./assets/level-3-site.jpg" />
+                  <img
+                    src="./assets/level-3-desktop.jpg"
+                    alt="Level 3 封面"
+                    width="960"
+                    height="1432"
+                  />
+                </picture>
+              </div>
               <div class="book-meta">
                 <div class="book-level">Level 3</div>
                 <div class="book-name">From Sales Rep to Trusted Partner</div>
@@ -1192,14 +1244,17 @@
             </article>
 
             <article class="book">
-              <img
-                src="./assets/level-4-site.jpg"
-                alt="Level 4 封面"
-                loading="lazy"
-                decoding="async"
-                width="720"
-                height="1074"
-              />
+              <div class="book-cover">
+                <picture>
+                  <source media="(max-width: 780px)" srcset="./assets/level-4-site.jpg" />
+                  <img
+                    src="./assets/level-4-desktop.jpg"
+                    alt="Level 4 封面"
+                    width="960"
+                    height="1432"
+                  />
+                </picture>
+              </div>
               <div class="book-meta">
                 <div class="book-level">Level 4</div>
                 <div class="book-name">From Expert to Industry Voice</div>
@@ -1354,19 +1409,20 @@
               <div class="contact-point">如在手机端浏览，可直接截图保存二维码后到微信识别添加。</div>
             </div>
             <div class="contact-actions">
-              <a class="button" href="./assets/wechat-code-site.jpg" target="_blank" rel="noopener">打开二维码</a>
+              <a class="button" href="./assets/wechat-code.jpg" target="_blank" rel="noopener">打开二维码</a>
             </div>
           </div>
 
             <div class="contact-qr">
-              <img
-                src="./assets/wechat-code-site.jpg"
-                alt="微信咨询二维码"
-                loading="lazy"
-                decoding="async"
-                width="720"
-                height="944"
-              />
+              <picture>
+                <source media="(max-width: 780px)" srcset="./assets/wechat-code-site.jpg" />
+                <img
+                  src="./assets/wechat-code.jpg"
+                  alt="微信咨询二维码"
+                  width="1224"
+                  height="1605"
+                />
+              </picture>
               <div class="contact-caption">WeChat Contact · Scan to Add</div>
             </div>
           </div>
