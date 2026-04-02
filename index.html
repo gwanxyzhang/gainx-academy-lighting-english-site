@@ -39,6 +39,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 92px;
     }
 
     body {
@@ -351,6 +352,10 @@
 
     .section {
       padding: 28px 0 12px;
+    }
+
+    .section[id] {
+      scroll-margin-top: 92px;
     }
 
     .section-title {
@@ -731,6 +736,19 @@
       color: var(--navy);
     }
 
+    .contact-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .contact-actions .button {
+      border-color: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff8eb;
+    }
+
     .footer {
       padding: 14px 0 42px;
     }
@@ -809,8 +827,16 @@
         align-items: flex-start;
       }
 
+      html {
+        scroll-padding-top: 24px;
+      }
+
+      .section[id] {
+        scroll-margin-top: 24px;
+      }
+
       .site-header {
-        position: sticky;
+        position: static;
       }
 
       .page-shell::before {
@@ -831,15 +857,9 @@
 
       .nav {
         width: 100%;
-        gap: 10px;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 2px;
-        scrollbar-width: none;
-      }
-
-      .nav::-webkit-scrollbar {
-        display: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
       }
 
       .nav a {
@@ -848,6 +868,7 @@
         border-radius: 999px;
         background: rgba(27, 42, 74, 0.04);
         border: 1px solid rgba(27, 42, 74, 0.06);
+        text-align: center;
       }
 
       .nav-cta {
@@ -856,7 +877,7 @@
       }
 
       .hero {
-        padding: 36px 0 18px;
+        padding: 28px 0 12px;
       }
 
       .hero-grid,
@@ -877,13 +898,19 @@
       }
 
       .hero-title {
-        font-size: 34px;
+        font-size: 28px;
         line-height: 1.14;
       }
 
       .hero-title em {
-        margin-top: 10px;
-        font-size: 20px;
+        margin-top: 8px;
+        font-size: 17px;
+        line-height: 1.22;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.24em;
       }
 
       .panel-main,
@@ -896,28 +923,58 @@
         line-height: 1.85;
       }
 
+      .hero-author {
+        font-size: 12px;
+      }
+
       .hero-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
       }
 
       .chip {
         padding: 8px 12px;
         font-size: 11px;
+        text-align: center;
       }
 
       .hero-actions {
         width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
       }
 
       .button {
         width: 100%;
         padding: 14px 16px;
+        min-height: 46px;
+      }
+
+      .hero-actions .button:last-child {
+        grid-column: 1 / -1;
       }
 
       .hero-card,
       .panel {
         padding: 20px 18px;
         border-radius: 22px;
+      }
+
+      .card-copy {
+        font-size: 12px;
+        line-height: 1.74;
+      }
+
+      .key-points {
+        gap: 8px;
+      }
+
+      .point {
+        padding: 10px 11px;
+        font-size: 11px;
+        line-height: 1.62;
       }
 
       .course-name,
@@ -951,7 +1008,7 @@
       }
 
       .contact-title {
-        font-size: 34px;
+        font-size: 30px;
       }
 
       .contact-text {
@@ -963,6 +1020,12 @@
         width: 100%;
         max-width: 320px;
         justify-self: center;
+        order: -1;
+      }
+
+      .contact-actions {
+        display: grid;
+        grid-template-columns: 1fr;
       }
 
       .footer {
@@ -991,7 +1054,7 @@
       }
 
       .book {
-        padding: 10px;
+        padding: 9px;
         border-radius: 18px;
       }
 
@@ -1000,7 +1063,8 @@
       }
 
       .book-name {
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 1.45;
       }
 
       .panel-main,
@@ -1256,12 +1320,15 @@
                 想先了解课程是否适合你，或想为门市、团队定制上课方式，
                 可以直接扫码添加微信沟通。适合个人报名、门市包场、团队内训与课程咨询。
               </div>
-              <div class="contact-points">
-                <div class="contact-point">适合个人提升、门市培训、团队定制与课程合作咨询。</div>
-                <div class="contact-point">添加后可直接沟通课程安排、学习建议、报名方式与适配方案。</div>
-                <div class="contact-point">如在手机端浏览，可直接截图保存二维码后到微信识别添加。</div>
-              </div>
+            <div class="contact-points">
+              <div class="contact-point">适合个人提升、门市培训、团队定制与课程合作咨询。</div>
+              <div class="contact-point">添加后可直接沟通课程安排、学习建议、报名方式与适配方案。</div>
+              <div class="contact-point">如在手机端浏览，可直接截图保存二维码后到微信识别添加。</div>
             </div>
+            <div class="contact-actions">
+              <a class="button" href="./assets/wechat-code.jpg" target="_blank" rel="noopener">打开二维码</a>
+            </div>
+          </div>
 
             <div class="contact-qr">
               <img src="./assets/wechat-code.jpg" alt="微信咨询二维码" />
