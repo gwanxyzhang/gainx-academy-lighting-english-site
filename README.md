@@ -2,6 +2,10 @@
 
 Public website for the `灯饰外贸英语全攻略` course brochure.
 
+Live site:
+
+`https://gwanxyzhang.github.io/gainx-academy-lighting-english-site/`
+
 ## Local Preview
 
 Open `index.html` directly in a browser, or run:
